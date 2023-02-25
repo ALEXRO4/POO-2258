@@ -21,12 +21,8 @@ public class Main {
 
            if(numComparador1 == (int)cad.charAt(i+1)){
                siONo = true;
-
            }else{
               siONo = false;
-
-              break;
-
            }
         }
 
