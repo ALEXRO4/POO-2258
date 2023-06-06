@@ -182,9 +182,9 @@ public class ModeloTablaPrincesa implements TableModel {
         return datos.get(i);
     }
 
-    public boolean borrarFila(PrincesasDisney princesasDisney, int index) throws SQLException {
+    public boolean borrarFila( int index) throws SQLException {
 
-        if (pdao.updte(princesasDisney, index)) {
+        if (pdao.delete(index)) {
 
             return true;
 

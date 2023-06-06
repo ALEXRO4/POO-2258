@@ -87,18 +87,8 @@ public class ControladorPrincesas extends MouseAdapter {
             PrincesasDisney tmp = modelo.getPrincesaAtIndex(index);
            int resultado = JOptionPane.showConfirmDialog(vista,"Esta seguro que desea borrar el registro "+(tmp.getId())+"?","Confirmacion",JOptionPane.YES_NO_OPTION);
             if(resultado == JOptionPane.YES_NO_OPTION) {
-
-                PrincesasDisney princesa = new PrincesasDisney();
-                princesa.setNombre("");
-                princesa.setCuento("");
-                princesa.setColorVestido("");
-                princesa.setImagenUrl("");
-                princesa.setAntagonista("");
-
-
-
                 try {
-                    if (modelo.borrarFila(princesa,tmp.getId())) {
+                    if (modelo.borrarFila(tmp.getId())) {
                         JOptionPane.showMessageDialog(vista, "Se borro correctamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
                         modelo.cargarDatos();
                         this.vista.getTblPrincesas().setModel(modelo);
